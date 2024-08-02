@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: url('C:/Users/MSI/Desktop/proposal-background-biv7tkt0bgw94128.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            color: #ff6347;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+        }
+        .container p {
+            font-size: 1.2em;
+            color: #333333;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #ff6347;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e55337;
+        }
+    </style>
+    <script>
+        function handleYes() {
+            window.location.href = 'message.html';
+        }
+
+        function handleNo() {
+            alert("Please reconsider...");
+            // Keep prompting until "Yes" is clicked
+            while (true) {
+                if (confirm("Are you sure you don't want to be my special someone?")) {
+                    alert("Please reconsider...");
+                } else {
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>A Special Message for You</h1>
+        <p>Ayushi,</p>
+        <p>I just wanted to let you know that you are someone very special to me. 
+        I have always admired you and would love to know you better. 
+        Will you be my special someone?</p>
+        <div id="message"></div>
+        <a href="#" class="button" onclick="handleYes()">Yes</a>
+        <a href="#" class="button" onclick="handleNo()">No</a>
+    </div>
+</body>
+</html>
